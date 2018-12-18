@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url(Raleway/Raleway-Regular.ttf);
+}
+*, button {
+    font-family: Raleway !important;
+}
+h3 {
+    font-size: 14px;
+}
+body ul li a {
+    font-size: 12px !important;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+    border: 1px solid red;
+    border-radius: 0;
+    border-bottom: transparent;
+    
+    animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+    -ms-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    -o-animation-delay: 2s;
+}
+
+textarea,
+select,
+input[type=text], 
+input[type=number], 
+input[type=date],
+input[type=password]{
+    border: 1px solid #d6d6d6;
+    border-radius: 0px !important;
+    outline: none;
+}
+table td {
+    font-size: 12px;
+}
+
+.carousel {
+    background: #0a0a0a4a;
+}
+.bg-overlay {
+    background: rgba(0,0,0,0.5) !important;
+}

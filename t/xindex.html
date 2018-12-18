@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+	
+	<?php require_once 'process.php'; ?>
+<?php
+$user = 'root';
+$pass = 'root';
+$db ='rural';
+
+$db = new mysqli('localhost', $user,$pass,$db);
+$result = $db->query("SELECT*FROM bhw");
+
+
+?>
+
+
+<div class ="row justify-content-center">
+	<table class="table">
+		<thead>
+		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th colspan="2"> Action </th>
+			</tr>
+			</thead>
+			
+			
+			</table>
+			<?php
+			while ($row = $result ->fetch_assoc()):
+			?>
+			<tr>
+				<td> <?php echo $row['firstname']?></td>
+				<td> <?php echo $row['middlename']?></td>
+				<td></td>
+				</tr>
+				<?php endwhile; ?>
+				</div>
+
+
+
+
+<div> <br><br></div>
+	<div class ="row justify-content-center">
+	<form method="POST" action="process.php">
+	<div class="form-group"> Brgy : <input type="text" name="brgy" value="PAYE" DISABLED/>
+	</div><br>
+	<div class="form-group">
+	<label> First Name</label>
+	<input type="text" name ="fname" class="form-control" value="First Name">
+</div>
+<div class="form-group">
+	<label> Middle Name</label>
+	<input type="text" name ="mname" class="form-control" value="Middle Name">
+	</div>
+<div class="form-group">
+	<label> Last Name </label>
+	<input type="text" name ="lname" class="form-control" value="Last Name">
+	</div>	
+<div class="form-group">
+	<label> Age </label>
+	<input type="text" name ="age" class="form-control" value="Age">
+	</div>		
+	
+<div class="form-group">
+	<label> Height in cm</label>
+	<input type="text" name ="height" class="form-control" value="Height">
+	</div>	
+	
+<div class="form-group">
+	<label> Weight in kg</label>
+	<input type="text" name ="weight" class="form-control" value="Weight">
+	</div>		
+	
+<div class="form-group">
+	<label> BMI :</label>
+	<input type="text" name ="bmi" class="form-control" value="Body Mass Index">
+	</div>	
+
+<div class="form-group">
+	<label> Status :</label>
+	<input type="text" name ="status" class="form-control" value="Status">
+	</div>	
+	
+<div class="form-group">
+	<label> Waist :</label>
+	<input type="text" name ="waist" class="form-control" value="Waist">
+	</div>	
+	
+	<div class="form-group">
+	<label> WHR:</label>
+	<input type="text" name ="whr" class="form-control" value="WHR">
+	</div>	
+	
+	
+	<div class="form-group"> 
+	<button type="submit" name="save" class="btn btn-primary"> Save</button>   <button type="submit" name="save"class="btn btn-warning"> Cancel</button>	
+	
+	
+	
+	</div>
+	</form>
+</div>
+</body>
+
+</html>
