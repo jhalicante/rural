@@ -36,13 +36,12 @@
 
   <div class="content-wrapper">
     
-<div class="container">
-  <img src="images/Image.png" height="15%" style="position:absolute;"/><h2 style="position:absolute; left: 27%; top:3%; font-family:calibri; font-size:300%;"><u> Rural Health and Nutrition Information System</h2></u>
-<br><br><br><br><br><br><br><br>
-</div><hr>
+<div class="container-fluid">
+</div>
+
 <div class="row">
-<div class="col-sm-2"></div>
-<div class="col-sm-4">
+<div class="col-sm-1"></div>
+<div class="col-sm-6">
 
 <form action="profile.php" method="post">
 <h4><label style="color:maroon"> I. Geographical Profile</label></h4><hr>
@@ -105,7 +104,7 @@
 				        <option value="Rolling Terrain">Rolling Terrain</option>	
 						 <option value="Hilly">Hilly</option>	
 						</select><br>
-<h4><label style="color:maroon">I. Agricultural Profile</label></h4><hr>
+<h4><label style="color:maroon">II. Agricultural Profile</label></h4><hr>
 <label>A. Physical Structures </label><br><hr>
 <label>A.1 Rice Mill Existing in the Barangay: </label><br>
 <select name ="AA1" class="form-control">
@@ -462,6 +461,7 @@ Distance from Baranggay:</label> <br><br>
 						<option value="FAR">FAR</option>
 						<option value="NONE">NONE</option>	
 						</select><br></label>
+						<br><br>
 <label>I. Most Common Transport Facilities ( Ranking )</label><br><br>
 <label>Bus</label><select name ="SI1" class="form-control">
 						 <option class="form-control" value="" disabled selected hidden>Ranking</option>

@@ -23,14 +23,14 @@
 </head>
 <body class="hold-transition login-page">
     <video src="assets/video2.mp4" id="bgvideo" autoplay="autoplay" loop width="100%"></video>
-<div class="login-box">
+<div class="login-box" style="margin: 1% auto;">
   <div class="login-logo">
       <img src="assets/images/Image.png" alt="" width="40%">
       <br/>
       <h4><?php  echo SITE_NAME; ?></h4>
   </div>
   <!-- /.login-logo -->
-  <div class="login-box-body" style="border-radius:10px;background:rgba(255, 255, 255, 0.5);">
+  <div class="login-box-body" style="border-radius:10px;background:rgba(255, 255, 255, 1);">
       <h4 class="text-center">Login to start your session</h4>
       <br/>
 <div class="container-fluid"> 
@@ -52,7 +52,8 @@
 
 	<br>
 	<div class="form-group"> 
-	<button type="submit" name="save" class="btn btn-primary"> Login</button>   <button type="submit" name="save"class="btn btn-warning"> Cancel</button>	
+	<button type="submit" name="save" class="btn btn-primary"> Login</button>   
+	<a href="index.php" class="btn btn-link">Back to home</a>	
 		</div>
 	
 	</form>
@@ -174,21 +175,5 @@ if(isset($_GET['mode'])) {
 <script src="<?php echo ASSET_URL; ?>bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="<?php echo ASSET_URL; ?>bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- iCheck -->
-<script src="<?php echo ASSET_URL; ?>plugins/iCheck/icheck.min.js"></script>
-<script>
-  $(function () {
-    $('input').iCheck({
-      checkboxClass: 'icheckbox_square-blue',
-      radioClass: 'iradio_square-blue',
-      increaseArea: '20%' /* optional */
-    });
-  });
-</script>
-  <script>
-  var vid = document.getElementById("bgvideo");
-    vid.play();
-    vid.currentTime = 10;
-  </script>
 </body>
 </html>
